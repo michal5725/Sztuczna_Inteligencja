@@ -187,18 +187,3 @@ if __name__ == "__main__":
             
     print("\nRozpoczynanie eksperymentu z wykresami...")
     uruchom_eksperyment()
-
-    # DFS jest lepszy gdy:
-    # chcemy znalesc rozwiazanie optymalnege czyli najkrótszą ścieżke. Sprawdza się najlepiej w stosunkowo otwartych przestrzeniach oraz w sytuacjach gdzie punkt docelowy znajduje sie niedalego punktu startowego
- 
-    # BFS jest lepszy gdy:
-    # naszym priorytetem jest krótki czas wykonania i znalezienie jakiejkolwiek drogi do celu, a jej optymalnośc nie na znaczenia. Jest znacznie bardziej wydajny w gęstych labiryntach z dłuimi korytarzami oraz gdy cel ukryty jest gdzies daleko.
- 
-    # Moje wnioski dotyczące pamięciochłonności:
-    # BFS charakteryzuje się większym zapotrzebiwaniem pamięci. Jego struktora Open musi przechowywać całą rosnąca "fale" przeszukiwań co na dużych planszach ogromnego wzrostu przechowywanych stanów.
-    # DFS przechowuje na stosie jedynie stany dla aktualnej badanej, pojedynczej sciezki co czymi go algorytmem o wiele bardziej oszczędnym pamięciowo.
- 
-    # Wpływ kolejności generowania sąsiadów na DFS:
-    # Kolejnośc dodawania sąsiadów na stos ma absolutnie kluczowy wpływ na wyniki i czas działania algo. Ze względu na nature stosu, sąsiad wygenerowany jako ostatni definiuje kierunek w ktorym algo natychmiast podązy.
-    # Jesli ustalona kolejnosc generowania faworyzuje kierunki prowadzace w storne celu DFS znajdzie droge w bardzo krotkim czasie, natomiast zla kolejnosc sprawi ze algo najpierw wyekspluruje calosc i doglebnie najbardziej
-    # oddalone slepe rejony labiryntu
